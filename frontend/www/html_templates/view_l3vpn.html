@@ -36,6 +36,9 @@
         <li role="presentation">
           <a href="#commands" aria-controls="commands" role="tab" data-toggle="tab" onclick="updateStatisticsIFrame()">Commands</a>
         </li>
+        <li role="presentation">
+          <a href="#configurations" aria-controls="configurations" role="tab" data-toggle="tab" onclick="updateStatisticsIFrame()">Configurations</a>
+        </li>
       </ul>
 
       <div class="tab-content">
@@ -50,6 +53,10 @@
         <div role="tabpanel" class="tab-pane" id="commands">
           <br/>
           [% INCLUDE html_templates/view_l3vpn/commands.html %]
+        </div>
+        <div role="tabpanel" class="tab-pane" id="configurations">
+          <br/>
+          [% INCLUDE html_templates/view_l3vpn/configurations.html %]
         </div>
       </div>
     </div>

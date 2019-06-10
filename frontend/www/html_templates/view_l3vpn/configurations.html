@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-4">
+    <label>Vendor</label>
+    <select class="form-control" id="configurations-vendor">
+      <option >Juniper</option>
+      <option >Cisco</option>
+    </select>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 15px">
+  <div class="col-md-12">
+    <pre id="configuration-result" style="display:block">
+  
+
+
+
+
+
+
+    </pre>
+    <button onclick="copyConfigToClip()">Copy to Clipboard</button>
+  </div>
+</div>
+
+<script>
+function copyConfigToClip() {
+  // Cant Copy for pre tag directly. Must move to hidden area
+  var text = document.getElementById("configuration-result").textContent;
+  var textArea = document.createElement('textarea');
+  textArea.textContent = text;
+  document.body.append(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  textArea.style.visibility = "hidden";
+  textArea.remove();
+}
+</script>
